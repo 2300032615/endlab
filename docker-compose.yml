@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  travel-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: travel-frontend-app
+    ports:
+      - "80:80"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
